@@ -1,0 +1,23 @@
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit()" >
+    <div *ngIf="!isLoggedIn()">
+    <mat-input-container>
+        <input
+        matInput
+        placeholder="Correo electronico"
+        formControlName="email"
+        id="email">
+    </mat-input-container>
+    <mat-input-container>
+        <input
+        matInput
+        placeholder="contraseña"
+        formControlName="password"
+        id="password">
+    </mat-input-container>
+    <button mat-raised-button color="accent" type="submit">Iniciar sesió</button>
+    </div>
+    <div *ngIf="isLoggedIn()">
+            <app-signup-screen></app-signup-screen>
+    </div>
+ 
+</form>

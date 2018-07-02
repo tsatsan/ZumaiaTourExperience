@@ -1,0 +1,18 @@
+.timeIcons{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top:    50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.weekDays{
+    text-align: center;
+}
+
+.weatherI{
+    margin-bottom: 20px;
+    margin-left: 5px;
+    width: 50px;
+}

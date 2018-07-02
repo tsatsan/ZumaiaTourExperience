@@ -1,0 +1,54 @@
+<mat-toolbar class="navColor">
+	<img class="icon" [routerLink]="['/']" src='../../assets/img/zumaia-bira.png'>
+	<span class="space"></span>
+	<div *ngIf="isLoggedIn()">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon >account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled>
+            {{ fullName() }}
+          </button>
+          <button mat-menu-item (click)="logout()">
+                Cerrar sesión
+          </button>
+          
+        </mat-menu>
+    </div> 
+    <div *ngIf="!isLoggedIn()">
+        <a [routerLink]="['/']">Itinerarios</a>
+        <a [routerLink]="['/']">Idioma</a>
+        <a [routerLink]="['/']">Contacto</a>
+    </div>               
+</mat-toolbar>
+<div class="imgbox">
+  <img   class="center-fit" src="{{ activityImage }}">
+</div>
+
+    
+<div class="container container-map">
+   
+  <div class="row row-map">
+   
+      <div class="col-md-6 info-container">
+        <div id="run-info">
+            <h2 class="data-entry"> {{ activityName }} </h2>
+           
+     
+            <p class="data-entry"> {{ activityDescription }}</p>
+           
+         
+        
+          
+        </div>
+      </div>
+      <div class="col-md-6"> 
+            <div id="map"></div>
+        </div>
+      <div *ngIf="isLoggedIn()">
+			<button mat-raised-button (click)="update()" color="primary">edit</button>	
+			<button mat-raised-button (click)="delete()" color="warn">delete</button>
+			</div>
+  </div>
+</div>
+

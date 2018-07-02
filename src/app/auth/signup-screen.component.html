@@ -1,0 +1,31 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <mat-input-container>
+         <input
+         matInput
+         placeholder="Nombre"
+         formControlName="firstName"
+         id="firstName">
+    </mat-input-container>
+    <mat-input-container>
+        <input
+        matInput
+        placeholder="Apellido"
+        formControlName="lastName"
+        id="lastName">
+    </mat-input-container>
+    <mat-input-container>
+        <input
+        matInput
+        placeholder="Correo electronico"
+        formControlName="email"
+        id="email">
+    </mat-input-container>
+    <mat-input-container>
+        <input
+        matInput
+        placeholder="contraseña"
+        formControlName="password"
+        id="password">
+    </mat-input-container>
+    <button mat-raised-button color="accent" type="submit">Iniciar sesió</button>
+</form>

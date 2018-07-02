@@ -1,0 +1,119 @@
+.details, .detail {
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+    background-color: #f4f4f4;
+  
+}
+.details {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: -16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.detail{
+    background: white;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-radius: 25px;
+    color: green;
+    font-weight: 300;
+}
+p {
+    margin:0;
+    font-weight: 300;
+}
+.example-card {
+    margin: 0 auto;
+    padding: 100px 100px 50px 100px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+.target{
+    padding-top: 1px;
+
+}
+/* .mat-card-content{
+    margin-bottom: 50px;
+} */
+.space {
+    flex: 1 1 auto;
+}
+.navColor{
+    background-color: white;
+}
+.mat-card{
+    max-width: 400px;
+} 
+.example-card{
+    width: 100%;
+}
+.icon{
+    width: 30px;
+}
+
+
+.webTitle{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 152px;
+    padding-right: 152px;
+}
+h1{
+    font-size: 22px;
+    font-weight: 200;
+}
+.title{
+    color:#275CE3;
+    font-weight: bold;
+}
+
+.excursion{
+    background-color: #ffd147;
+    color: white;
+    border-radius: 25px;
+    position: relative;
+    top: 40px;
+    left: -40px;
+}
+.lugar{
+    background-color: #47d5ff;
+    color: white;
+    border-radius: 25px;
+    position: relative;
+    top: 40px;
+    left: -40px;
+}
+.paseo{
+    background-color:blue;
+    color: white;
+    border-radius: 25px;
+    position: relative;
+    top: 40px;
+    left: -40px;
+}
+
+a {
+    text-decoration: none;
+}
+h5{
+    color: black;
+    padding-top: 20px;
+}
+.butAddAct{
+    margin-bottom: 40px;
+    margin-right: 100px;
+    text-align: right;
+}
+@media (max-width: 830px) {
+    .example-card{
+        padding: 30px;
+    }
+    .webTitle{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+  }

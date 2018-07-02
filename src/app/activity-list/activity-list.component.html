@@ -1,0 +1,63 @@
+<mat-toolbar class="navColor">
+	<img class="icon" [routerLink]="['/']" src='../../assets/img/zumaia-bira.png'>
+	<span class="space"></span>
+	<div *ngIf="isLoggedIn()">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon >account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled>
+            {{ fullName() }}
+          </button>
+          <button mat-menu-item (click)="logout()">
+                Cerrar sesión
+          </button>
+          
+        </mat-menu>
+    </div> 
+    <div *ngIf="!isLoggedIn()">
+        <a [routerLink]="['/']">Itinerarios</a>
+        <a [routerLink]="['/']">Idioma</a>
+        <a [routerLink]="['/']">Contacto</a>
+    </div>               
+</mat-toolbar>
+<div class="webTitle">
+    <h1 class="title">ZumaiaBira</h1>
+    <h1 class="subtitle">Descubre lugares, paseos y excursiones por la costa y la montaña</h1>   
+</div>
+    <div class="example-card">
+         
+        <mat-card-content *ngFor="let activity of activities">
+            <mat-card class="target">
+
+        <button class="{{ activity.tipo }}"> {{ activity.tipo }} </button> 
+                    <a [routerLink]="['/activities', activity._id]">
+                        
+                        <img mat-card-image  src="{{ activity.image }}" alt="">
+                        </a>
+                        <div class="details">
+                            <div class="detail">
+                                    <mat-icon>trending_flat</mat-icon>
+                                    <p> {{ activity.distance }}  </p>
+                            </div>
+                            <div class="detail">
+                                <mat-icon>trending_up</mat-icon>
+                                <p>  {{ activity.unlevenless }}</p>
+                            </div>
+                            <div class="detail">
+                                    <mat-icon>access_time</mat-icon>
+                                    <p>  {{ activity.time  }}</p>
+                            </div>
+                        </div>
+                            <a [routerLink]="['/activities', activity._id]">
+                            <h5>{{ activity.name }}</h5>     
+                            </a>
+                            <p>{{ activity.description }}</p>
+            </mat-card>      
+        </mat-card-content>
+    </div>   
+            <div class='butAddAct' *ngIf="isLoggedIn()">
+            <button [routerLink]="['/new']" mat-fab class="add-question" color="accent"><mat-icon>add</mat-icon></button>
+            </div>
+
+
