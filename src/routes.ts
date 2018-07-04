@@ -4,6 +4,9 @@ import { ActivityFormComponent } from './app/activity-form/activity-form.compone
 import { MapComponent } from './app/map/map.component';
 import { SigninScreenComponent } from './app/auth/signin-screen.component';
 import { SignupScreenComponent } from './app/auth/signup-screen.component';
+import { AppContactComponent } from './app/contact-message/contact.component';
+import { NotaLegalComponent } from './app/nota-legal/nota-legal.component';
+import { WeatherComponentPage  } from './app/weather-page/weather-page.component';
 
 export const appRoutes: Routes = [
   { path: 'activities' , component: ActivityListComponent },
@@ -12,6 +15,9 @@ export const appRoutes: Routes = [
   { path: 'signin', component: SigninScreenComponent},
   { path: 'signup', component: SignupScreenComponent},
   { path: 'activities/:id' , component: MapComponent },
+  { path: 'contacto', component: AppContactComponent },
+  { path: 'nota-legal', component: NotaLegalComponent },
+  { path: 'tiempo', component: WeatherComponentPage  },
   { path: '', redirectTo: '/activities', pathMatch: 'full' }
 
 

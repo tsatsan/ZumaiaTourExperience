@@ -1,0 +1,80 @@
+<mat-toolbar class="navColor">
+	<img class="icon" [routerLink]="['/']" src='../../assets/img/zumaia-bira.png'>
+	<span class="space"></span>
+	<div *ngIf="isLoggedIn()">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon >account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled>
+            {{ fullName() }}
+          </button>
+          <button mat-menu-item (click)="logout()">
+                Cerrar sesión
+          </button>
+          
+        </mat-menu>
+    </div> 
+    <div *ngIf="!isLoggedIn()">
+        <a class="menuLinks" [routerLink]="['/']">Itinerarios</a>
+        <!-- <a class="menuLinks" [routerLink]="['/']">Idioma</a> -->
+        <a class="menuLinks" [routerLink]="['/contacto']">Contacto</a>
+    </div>               
+</mat-toolbar>
+<div class="container cont-legal">
+
+    <h1>Nota legal</h1>
+    <p>De acuerdo con lo establecido en la Ley de servicios de la sociedad de la información y de comercio electrónico Ley 34/2002, de 11 de julio, le comunicamos que el presente sitio web www.zumaiabira.com (en adelante LA WEB) es propiedad de Luna Nueva Carvajal Mínguez, con DNI 72462915N y domicilio en C/Juan Belmonte nº19 Zumaia 20750 Guipúzcoa (en adelante EL PROPIETARIO DE LA WEB). Puede contactar con nosotros enviando un correo electrónico a luna@blau.eus 
+    La navegación por el sitio web de EL PROPIETARIO DE LA WEB le atribuye la condición de usuario del mismo e implica la aceptación de las disposiciones incluidas en este Aviso Legal. 
+    EL PROPIETARIO DE LA WEB se reserva el derecho a actualizar, modificar o eliminar la información contenida en LA WEB de forma unilateral, en cualquier momento y sin necesidad de preaviso alguno, pudiendo incluso limitar o no permitir el acceso a dicha información. 
+    EL PROPIETARIO DE LA WEB no será responsable de cualquier daño que pudiera derivarse en relación con la utilización de LA WEB o de los links con otras páginas en ella contenidos. 
+    Tampoco será responsable en los casos de fallo, error, interrupción, demora en la transmisión, virus informático, fallo del sistema o línea y o cualquier otro de esta índole que pudiera suceder. 
+    El usuario responderá frente a EL PROPIETARIO DE LA WEB o frente a terceros, de cualesquiera daños y perjuicios que pudieran causarse como consecuencia del incumplimiento de dicha obligación. 
+    </p>
+    <h3>PROPIEDAD INDUSTRIAL E INTELECTUAL </h3>
+
+    <p>Los logos y/o marcas de EL PROPIETARIO DE LA WEB se encuentran debidamente registradas, reservándonos el ejercicio de las acciones legales que correspondan en caso de violación de los Derechos de Propiedad Industrial. Se prohíbe la copia, duplicación, redistribución, comercialización o cualquier otra actividad que se pueda realizar con los contenidos de su página web (textos, imágenes, voces y/o estructura), salvo consentimiento por escrito.</p> 
+
+<h3>POLÍTICA DE PRIVACIDAD  </h3>
+
+<p>A efecto de lo previsto en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal EL PROPIETARIO DE LA WEB informa al Usuario de la existencia de ficheros automatizados de datos de carácter personal denominados "CLIENTES" inscrito en el R.G.P.D. (Registro General de Protección de Datos), creados con la finalidad de realizar la gestión de la relación con los usuarios, clientes y potenciales.  </p>
+
+<h3>ENVÍO Y REGISTRO DE DATOS DE CARÁCTER PERSONAL </h3>
+
+<p>El envío de datos de carácter personal es obligatorio para contactar y recibir información sobre los productos y servicios de EL PROPIETARIO DE LA WEB.
+   El no facilitar los datos personales solicitados o el no aceptar la presente política de protección de datos supone la imposibilidad de suscribirse, registrarse o recibir información de los productos y servicios de EL PROPIETARIO DE LA WEB. De acuerdo a lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, le informamos que los datos personales que se obtengan como consecuencia de su envío de datos personales, serán incorporados a un fichero titularidad de EL PROPIETARIO DE LA WEB teniendo implementadas todas las medidas de seguridad establecidas en el Real Decreto 1720/2007.</p>
+
+
+<h3>EXACTITUD Y VERACIDAD DE LOS DATOS FACILITADOS</h3> 
+
+<p>El Usuario que envía la información a LA WEB es el único responsable de la veracidad y corrección de los datos incluidos, exonerando a EL PROPIETARIO DE LA WEB de cualquier responsabilidad al respecto. Los usuarios garantizan y responden, en cualquier caso, de la exactitud, vigencia y autenticidad de los datos personales facilitados, y se comprometen a mantenerlos debidamente actualizados. El usuario acepta proporcionar información completa y correcta en el formulario de registro o suscripción. EL PROPIETARIO DE LA WEB no responde de la veracidad de las informaciones que no sean de elaboración propia y de las que se indique otra fuente, por lo que tampoco asume responsabilidad alguna en cuanto a hipotéticos perjuicios que pudieran originarse por el uso de dicha información. Se exonera a EL PROPIETARIO DE LA WEB de responsabilidad ante cualquier daño o perjuicio que pudiera sufrir el Usuario como consecuencia de errores, defectos u omisiones, en la información facilitada por EL PROPIETARIO DE LA WEB siempre que proceda de fuentes ajenas a EL PROPIETARIO DE LA WEB.</p>
+
+
+<h3>FINALIDADES</h3>
+
+<p>Las finalidades de la recogida de datos son: el desarrollo de actividades y prestación de información sobre productos de EL PROPIETARIO DE LA WEB. </p>
+
+
+<h3>POLÍTICA DE COOKIES</h3>
+
+<p>EL PROPIETARIO DE LA WEB por su propia cuenta o la de un tercero contratado para prestación de servicios de medición, pueden utilizar cookies cuando el usuario navega por el sitio web. Las cookies son ficheros enviados al navegador por medio de un servicio web con la finalidad de registrar las actividades del usuario durante su tiempo de navegación.
+    Las cookies utilizadas se asocian únicamente con un usuario anónimo y su ordenador, y no proporcionan por sí mismas los datos personales del usuario.
+    Mediante el uso de las cookies resulta posible que el servidor donde se encuentra la web reconozca el navegador web utilizado por el usuario con la finalidad de que la navegación sea más sencilla. Se utilizan también para medir la audiencia y parámetros del tráfico, controlar el proceso y número de entradas.
+    El usuario tiene la posibilidad de configurar su navegador para ser avisado de la recepción de cookies y para impedir su instalación en su equipo. Por favor consulte las instrucciones y manuales de su navegador para ampliar esta información.
+    Para utilizar el sitio web no es necesario que el usuario permita la instalación de las cookies enviadas al sitio web, o el tercero que actúe en su nombre, sin perjuicio de que sea necesario que el usuario inicie una sesión tal en cada uno de los servicios cuya prestación requiera el previo registro.
+    En todo caso las cookies tienen un carácter temporal con la única finalidad de hacer más eficaz su transmisión ulterior. En ningún caso se utilizará cookies para recoger información de carácter personal.
+</p>
+<h3>EJERCICIO DE DERECHOS DE ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICIÓN </h3>
+
+<p>El usuario podrá revocar el consentimiento prestado y ejercer los derechos de acceso, rectificación, cancelación y oposición escribiendo a la siguiente dirección de correo electrónico: luna@blau.eus
+        Para ejercer dichos derechos y en cumplimiento de la Instrucción 1/1998, de 19 de enero, de la Agencia Española de Protección de Datos, es necesario que usted acredite su personalidad mediante el envío de fotocopia de Documento Nacional de Identidad o cualquier otro medio válido en Derecho.</p> 
+
+
+<h3>MEDIDAS DE SEGURIDAD INFORMÁTICA </h3>
+
+<p>EL PROPIETARIO DE LA WEB ha adoptado los niveles de seguridad de protección de los Datos Personales legalmente requeridos y recogidos en el R.D. 1720/2007 de Medidas de Seguridad. No obstante, dispone de otros medios adicionales, como son firewalls de última generación, aparte de medidas técnicas como software para la encriptación de la información confidencial y control de acceso a la información de carácter personal, usuarios restringidos, políticas de seguridad, usuarios y contraseñas que caducan según exige la LOPD, y otros sistemas orientados a evitar el mal uso, alteración, acceso no autorizado y robo de los Datos Personales facilitados, EL PROPIETARIO DE LA WEB no será responsable de posibles daños o perjuicios que se pudieran derivar de interferencias, omisiones, interrupciones, virus informáticos, averías telefónicas o desconexiones en el funcionamiento operativo de este sistema electrónico, motivadas por causas ajenas a EL PROPIETARIO DE LA WEB; de retrasos o bloqueos en el uso del presente sistema electrónico causados por deficiencias o sobrecargas de líneas telefónicas o sobrecargas en el C.P.D. (Centro de Procesos de Datos), en el sistema de Internet o en otros sistemas electrónicos, así como de daños que puedan ser causados por terceras personas mediante intromisiones ilegítimas fuera del control de EL PROPIETARIO DE LA WEB. </p>
+
+<h3> ACEPTACIÓN Y CONSENTIMIENTO </h3>
+
+<p>El Usuario declara haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptando y consintiendo el tratamiento automatizado de los mismos por parte de EL PROPIETARIO DE LA WEB, en la forma y para las finalidades indicadas en la presente Política de Protección de Datos Personales.</p>
+</div>

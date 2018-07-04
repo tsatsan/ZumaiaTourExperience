@@ -1,25 +1,13 @@
 
 <router-outlet></router-outlet>
-<div class="containerBlue">
-  <div class="content">
-          <div class="textBlue">
-                  <h4>Descarga la App gratuita en tu mobil</h4>
-                  <p class='subtitle'>Si vas  a visitar Zumaia, o te encuentras ya. Descargate la app en tu ovil, para poder realizar las excursiones y paseos propuestos</p>
-                  <img class="imgButton" src='../../assets/img/button.png'>
-          </div>
-         <div class="imageBlue">
-             <img class="mobilImage" src='../../assets/img/iphone.png'>
-         </div>
-  </div>
-</div>
-<app-weather-icons></app-weather-icons> 
+
 <footer>
   <ul>
-      <li>Itinerarios</li>
-      <li>Preguntas Frecuentes</li>
+      <li><a class="fooLink" [routerLink]="['/']">Itinerarios</a></li>
+      <li><a  class="fooLink" [routerLink]="['/nota-legal']">Nota legal</a></li>
       <img class='logoFooter' src='../../assets/img/logo-footer.png'>
-      <li>El tiempo</li>
-      <li>Idioma</li>
-      <li>Contacto</li>
+      <li><a class="fooLink" [routerLink]="['/tiempo']">El tiempo</a></li>
+      <li><a  class="fooLink"  [routerLink]="['/contacto']">Contacto</a></li>
+      <img class='logoFooter1' src='../../assets/img/logo-footer.png'>
   </ul>
 </footer>

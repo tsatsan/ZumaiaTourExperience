@@ -46,7 +46,6 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
     this.activityService
     .getWeather().subscribe(data => {
-          console.log('data --->', data.list);
         const hoy = (data.list[0].dt_txt).substr(0, 11);
         const Icons = [];
         const Days = [];
@@ -68,8 +67,6 @@ export class WeatherComponent implements OnInit {
           if (day !== hoy && hour === '12:00:00') {
           Icons.push(el.weather[0].icon);
           Days.push(el.dt_txt);
-          } else {
-            console.log('no coincidence');
           }
         }
 
@@ -124,16 +121,17 @@ export class WeatherComponent implements OnInit {
             Icons.push(el);
           }
         }
-          this.urlImageWeather1 =   Icons[5];
-          this.urlImageWeather2 =  Icons[6];
-          this.urlImageWeather3 =  Icons[7];
-          this.urlImageWeather4 =  Icons[8];
-          this.urlImageWeather5 =  Icons[9];
+          this.urlImageWeather1 =  Icons[6];
+          this.urlImageWeather2 =  Icons[7];
+          this.urlImageWeather3 =  Icons[8];
+          this.urlImageWeather4 =  Icons[9];
+          this.urlImageWeather5 =  Icons[10];
 
           console.log(this.urlImageWeather1);
           for (const el of Icons) {
             console.log(el);
           }
+          console.log(Icons);
 
           this.day2 = moment(Days[0]).format('ddd');
           this.day3 = moment(Days[1]).format('ddd');

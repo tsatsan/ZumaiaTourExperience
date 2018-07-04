@@ -1,0 +1,27 @@
+.space {
+    flex: 1 1 auto;
+}
+.navColor{
+    background-color: white;
+}
+.mat-card{
+    max-width: 400px;
+} 
+.example-card{
+    width: 100%;
+}
+.icon{
+    width: 30px;
+}
+.menuLinks{
+    color: gray;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 14px;
+}
+@media (min-width: 1200px) {
+    .formMail{
+        margin-bottom: 335px;
+    }
+}

@@ -3,8 +3,8 @@
     justify-content: space-evenly;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top:    50px;
-    padding-bottom: 50px;
+    /* padding-top:    50px;
+    padding-bottom: 50px; */
     margin-top: 50px;
 }
 .weekDays{

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ActivityListComponent } from './activity-list/activity-list.component';
@@ -11,6 +12,8 @@ import { ActivityFormComponent } from './activity-form/activity-form.component';
 import { SigninScreenComponent } from './auth/signin-screen.component';
 import { SignupScreenComponent } from './auth/signup-screen.component';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherComponentPage } from './weather-page/weather-page.component';
+import { NotaLegalComponent } from './nota-legal/nota-legal.component';
 // Angular Material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
@@ -20,6 +23,8 @@ import { ActivityService } from './services/activity.service';
 import { appRoutes } from '../routes';
 import { MapService } from './services/map.service';
 import { AuthService } from './auth/auth.service';
+import { MessageService } from './services/messages.service';
+import { AppContactComponent } from './contact-message/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { AuthService } from './auth/auth.service';
     ActivityFormComponent,
     SigninScreenComponent,
     SignupScreenComponent,
-    WeatherComponent
+    WeatherComponent,
+    AppContactComponent,
+    NotaLegalComponent,
+    WeatherComponentPage
   ],
   imports: [
     BrowserModule,
@@ -39,8 +47,9 @@ import { AuthService } from './auth/auth.service';
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [ActivityService, MapService, AuthService],
+  providers: [ActivityService, MapService, AuthService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

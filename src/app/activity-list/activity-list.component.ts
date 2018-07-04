@@ -29,7 +29,6 @@ export class ActivityListComponent implements OnInit {
     .getActivities()
     .then((activities: Activity[]) => {
       this.activities = activities;
-      console.log(activities);
     });
 
   }

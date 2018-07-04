@@ -1,5 +1,6 @@
 #map{
     height: 250px;
+    margin-bottom: 50px;
 }
 .row.map{
     background-color: rgba(255,255,255,0.94);
@@ -16,6 +17,13 @@
 .navColor{
     background-color: white;
 }
+.menuLinks{
+    color: gray;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 14px;
+}
 .mat-card{
     max-width: 400px;
 } 
@@ -29,8 +37,64 @@
     display: grid;
     height: 100%;
    }
-   .center-fit {
+.center-fit {
     max-width: 100%;
     max-height: 100vh;
     margin: auto;
    }
+   .containerBlue{
+    background: rgba(77,158,234,1);
+    background: -moz-linear-gradient(left, rgba(77,158,234,1) 0%, rgba(77,158,234,1) 35%, rgba(123,189,239,1) 78%, rgba(123,189,239,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(77,158,234,1)), color-stop(35%, rgba(77,158,234,1)), color-stop(78%, rgba(123,189,239,1)), color-stop(100%, rgba(123,189,239,1)));
+    background: -webkit-linear-gradient(left, rgba(77,158,234,1) 0%, rgba(77,158,234,1) 35%, rgba(123,189,239,1) 78%, rgba(123,189,239,1) 100%);
+    background: -o-linear-gradient(left, rgba(77,158,234,1) 0%, rgba(77,158,234,1) 35%, rgba(123,189,239,1) 78%, rgba(123,189,239,1) 100%);
+    background: -ms-linear-gradient(left, rgba(77,158,234,1) 0%, rgba(77,158,234,1) 35%, rgba(123,189,239,1) 78%, rgba(123,189,239,1) 100%);
+    background: linear-gradient(to right, rgba(77,158,234,1) 0%, rgba(77,158,234,1) 35%, rgba(123,189,239,1) 78%, rgba(123,189,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d9eea', endColorstr='#7bbdef', GradientType=1 );
+    color: white;
+    padding: 35px 80px 100px 80px;
+    max-height: 350px;
+}
+.textBlue{
+    max-width: 37%;
+    margin-top: 40px;
+    margin-right: 100px;
+}
+.mobilImage{
+    max-width: 200px;
+    margin-left: 20px;
+}
+.content{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.subtitle{
+    font-weight: 100;
+}
+.imgButton{
+    width: 150px;
+    margin-top: 30px;
+}
+
+@media (max-width: 830px) {
+    .subtitle{
+       display: none;
+   }
+   .textBlue{
+       margin-right: 20px;
+       max-width: 53%;
+       margin-top: 36px; 
+   }
+   h4{
+       font-size: 1.3em;
+   }
+   .mobilImage{
+       max-width: 100px;
+   }
+   .imgButton{
+       margin-top: 70px;
+       margin-left: 54px;
+   }
+}

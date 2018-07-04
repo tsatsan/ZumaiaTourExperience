@@ -16,9 +16,9 @@
         </mat-menu>
     </div> 
     <div *ngIf="!isLoggedIn()">
-        <a [routerLink]="['/']">Itinerarios</a>
-        <a [routerLink]="['/']">Idioma</a>
-        <a [routerLink]="['/']">Contacto</a>
+        <a class="menuLinks" [routerLink]="['/']">Itinerarios</a>
+        <!-- <a class="menuLinks" [routerLink]="['/']">Idioma</a> -->
+        <a class="menuLinks" [routerLink]="['/contacto']">Contacto</a>
     </div>               
 </mat-toolbar>
 <div class="webTitle">
@@ -60,4 +60,17 @@
             <button [routerLink]="['/new']" mat-fab class="add-question" color="accent"><mat-icon>add</mat-icon></button>
             </div>
 
+<div class="containerBlue">
+    <div class="content">
+            <div class="textBlue">
+                    <h4>Descarga la App gratuita en tu mobil</h4>
+                    <p class='subtitle'>Si vas  a visitar Zumaia, o te encuentras ya. Descargate la app en tu ovil, para poder realizar las excursiones y paseos propuestos</p>
+                    <img class="imgButton" src='../../assets/img/button.png'>
+            </div>
+           <div class="imageBlue">
+               <img class="mobilImage" src='../../assets/img/iphone.png'>
+           </div>
+    </div>
+</div>  
+<app-weather-icons></app-weather-icons>       
 

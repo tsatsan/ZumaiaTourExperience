@@ -1,0 +1,34 @@
+<mat-toolbar class="navColor">
+	<img class="icon" [routerLink]="['/']" src='../../assets/img/zumaia-bira.png'>
+	<span class="space"></span>
+	<div *ngIf="isLoggedIn()">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon >account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled>
+            {{ fullName() }}
+          </button>
+          <button mat-menu-item (click)="logout()">
+                Cerrar sesión
+          </button>
+          
+        </mat-menu>
+    </div> 
+    <div *ngIf="!isLoggedIn()">
+        <a class="menuLinks" [routerLink]="['/']">Itinerarios</a>
+        <!-- <a class="menuLinks" [routerLink]="['/']">Idioma</a> -->
+        <a class="menuLinks" [routerLink]="['/contacto']">Contacto</a>
+    </div>               
+</mat-toolbar>
+<div class="container">
+    <h1>El tiempo</h1>
+    <p> La fuente de información que utiliza esta web para mostrar las condiciones actuales del tiempo y su pronóstico para los siguientes 4 días es de Open Weather Map 
+        Es una empresa de IT con experiencia práctica en Big Data y tecnologías geoespaciales.
+        Utilizando su API para desarrolladores podemos mostrar los datos meteorológicos.
+        Si en algún caso la previsión meteorológica no coincide con la realidad, disculpen las molestias.</p>
+</div>
+<div class="weatherIcons">
+    <app-weather-icons></app-weather-icons> 
+</div>
+   

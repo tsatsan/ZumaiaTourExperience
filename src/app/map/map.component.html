@@ -16,30 +16,21 @@
         </mat-menu>
     </div> 
     <div *ngIf="!isLoggedIn()">
-        <a [routerLink]="['/']">Itinerarios</a>
-        <a [routerLink]="['/']">Idioma</a>
-        <a [routerLink]="['/']">Contacto</a>
+        <a class="menuLinks" [routerLink]="['/']">Itinerarios</a>
+        <!-- <a [routerLink]="['/']">Idioma</a> -->
+        <a class="menuLinks" [routerLink]="['/']">Contacto</a>
     </div>               
 </mat-toolbar>
 <div class="imgbox">
   <img   class="center-fit" src="{{ activityImage }}">
-</div>
-
-    
+</div>  
 <div class="container container-map">
-   
   <div class="row row-map">
    
       <div class="col-md-6 info-container">
         <div id="run-info">
             <h2 class="data-entry"> {{ activityName }} </h2>
-           
-     
-            <p class="data-entry"> {{ activityDescription }}</p>
-           
-         
-        
-          
+            <p class="data-entry"> {{ activityDescription }}</p>  
         </div>
       </div>
       <div class="col-md-6"> 
@@ -51,4 +42,17 @@
 			</div>
   </div>
 </div>
+<div class="containerBlue">
+    <div class="content">
+            <div class="textBlue">
+                    <h4>Descarga la App gratuita en tu mobil</h4>
+                    <p class='subtitle'>Si vas  a visitar Zumaia, o te encuentras ya. Descargate la app en tu ovil, para poder realizar las excursiones y paseos propuestos</p>
+                    <img class="imgButton" src='../../assets/img/button.png'>
+            </div>
+           <div class="imageBlue">
+               <img class="mobilImage" src='../../assets/img/iphone.png'>
+           </div>
+    </div>
+</div>
+<app-weather-icons></app-weather-icons>         
 
