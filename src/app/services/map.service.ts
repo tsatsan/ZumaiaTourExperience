@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Activity } from '../shared/activity.model';
 import { Http } from '@angular/http';
 import { environment } from '../../environments/environment';
-import urljoin = require('url-join');
+import {urljoin} from 'url-join';
 import 'rxjs/add/operator/toPromise';
 // import { activities } from '../../../server/routes';
 
