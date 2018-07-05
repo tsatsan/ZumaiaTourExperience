@@ -1,4 +1,30 @@
-
+<mat-toolbar class="navColor">
+    <img class="icon" [routerLink]="['/']" src='../../assets/img/zumaia-bira.png'>
+    <span class="space"></span>
+    <a class="menuLinks" [routerLink]="['/']">Itinerarios</a>
+    <!-- <a class="menuLinks" [routerLink]="['/']">Idioma</a> -->
+    <a class="menuLinks" [routerLink]="['/contacto']">Contacto</a>
+             
+    <button *ngIf="!isLoggedIn()" [routerLink]="['/signin']"  mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    
+    <div *ngIf="isLoggedIn()">
+        <a class="menuLinks" [routerLink]="['/new']">nueva actividad</a>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon >account_circle</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>
+              {{ fullName() }}
+            </button>
+            <button mat-menu-item (click)="logout()">
+                  Cerrar sesión
+            </button>
+            
+          </mat-menu>
+      </div> 
+  </mat-toolbar>
 <router-outlet></router-outlet>
 
 <footer>
