@@ -19,8 +19,8 @@ export class ActivityService {
 
   constructor(private http: Http) {
     this.activitiesUrl = urljoin(environment.apiUrl + 'activities');
-    this.uploadUrl = urljoin(environment.apiUrl + 'upload/');
-    this.gpxUrl = urljoin(environment.apiUrl + 'gpx/');
+    this.uploadUrl = urljoin(environment.apiUrl , 'upload/');
+    this.gpxUrl = urljoin(environment.apiUrl , 'gpx/');
   }
 
   getActivities(): Promise<void | Activity[]> {
