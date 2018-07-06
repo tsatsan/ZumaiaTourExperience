@@ -44,12 +44,10 @@ app.post('/:id', (req, res) =>{
         gpxData = req.file.path
         gpxDataFile = req.file.filename
         
-     
-        
         //configuring the AWS environment
         aws.config.update({
-          accessKeyId: 'AKIAJTBGHIHKBIFZZCJA',
-          secretAccessKey: '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'
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
         });
     
         var s3 = new aws.S3();

@@ -1,8 +1,7 @@
 import express from 'express'
 import { required } from '../middleware'
 import { activity } from '../db-api'
-import { image } from 'cloudinary';
-import { handleError } from '../utils'
+import { handleError } from '../utils'
 
 var urljoin = require('url-join');
 
@@ -30,7 +29,7 @@ try {
 app.post('/', required, async (req,res) =>{
     const { name, description,  image, tipo, unlevenless, time, distance, gpxData } = req.body
     console.log('probant dataLoc --->>', global.dataLocation)
-       const urlGpx = urljoin('http://localhost:3000/api/gpx/', global.gpxDataFile)
+
     
     const a = {
         name, 

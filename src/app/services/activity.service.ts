@@ -7,13 +7,11 @@ import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { Router } from '@angular/router';
-import { promise } from 'protractor';
+
 
 @Injectable()
 export class ActivityService {
  private activitiesUrl: string;
- private imageUrl: string;
  private weatherApiKey = '8be3fadb9f2590db61d9eec9d253e1cf';
  private weatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=6358169&APPID=' + this.weatherApiKey ;
 
@@ -54,7 +52,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = 'http://localhost:3000/api/upload/' ;
+     const url = environment.apiUrl +  '/upload/' ;
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id, formData, options).map(response => response.text())
@@ -65,7 +63,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = 'http://localhost:3000/api/gpx/' ;
+     const url = environment.apiUrl +  '/gpx/' ;
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id , formData, options).map(response => response.text())
