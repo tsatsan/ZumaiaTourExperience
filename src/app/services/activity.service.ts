@@ -12,11 +12,15 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ActivityService {
  private activitiesUrl: string;
+ private uploadUrl: string;
+ private gpxUrl: string;
  private weatherApiKey = '8be3fadb9f2590db61d9eec9d253e1cf';
  private weatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=6358169&APPID=' + this.weatherApiKey ;
 
   constructor(private http: Http) {
     this.activitiesUrl = urljoin(environment.apiUrl + 'activities');
+    this.uploadUrl = urljoin(environment.apiUrl + 'upload/');
+    this.gpxUrl = urljoin(environment.apiUrl + 'gpx/');
   }
 
   getActivities(): Promise<void | Activity[]> {
@@ -52,7 +56,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = urljoin(environment.apiUrl + 'upload/');
+     const url = this.uploadUrl;
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id, formData, options).map(response => response.text())
@@ -63,7 +67,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = urljoin(environment.apiUrl + 'gpx/');
+     const url = this.gpxUrl;
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id , formData, options).map(response => response.text())
