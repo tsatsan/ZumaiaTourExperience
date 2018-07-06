@@ -39,9 +39,9 @@ export class ActivityFormComponent {
     onFileChange(event) {
         if (event.target.files.length === 1) {
             const file = event.target.files[0];
-            this.activityService.upFile(event.target.files[0])
+            this.activityService.upFile(file)
             .subscribe(response => {
-
+                console.log('ok' , response);
             },
             error => {
                 console.error(error);
@@ -51,8 +51,9 @@ export class ActivityFormComponent {
     onGpxChange(event) {
         if (event.target.files.length === 1) {
             const file = event.target.files[0];
-            this.activityService.upGpx(event.target.files[0])
+            this.activityService.upGpx(file)
             .subscribe(response => {
+                console.log('ok', response);
             },
             error => {
                 console.error(error);
