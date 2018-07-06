@@ -52,7 +52,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = urljoin(environment.apiUrl + '/upload/');
+     const url = urljoin(environment.apiUrl + 'upload/');
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id, formData, options).map(response => response.text())
@@ -63,7 +63,7 @@ export class ActivityService {
     formData.append('file', file);
     formData.append('fileName', file.name);
     const id = file.name;
-     const url = urljoin(environment.apiUrl + '/gpx/');
+     const url = urljoin(environment.apiUrl + 'gpx/');
      const headers = new Headers({});
      const options = new RequestOptions({ headers: headers });
      return this.http.post(url + id , formData, options).map(response => response.text())
