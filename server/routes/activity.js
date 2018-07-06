@@ -3,8 +3,6 @@ import { required } from '../middleware'
 import { activity } from '../db-api'
 import { handleError } from '../utils'
 
-var urljoin = require('url-join');
-
 const app = express.Router()
 
 app.get('/', async (req, res) => {
@@ -44,15 +42,14 @@ app.post('/', required, async (req,res) =>{
     }
     a.gpxData = global.dataLocation
     a.image = global.imgUrl
-    // a._id = +new Date()
     a.user = req.user
     try{
         const savedActivity = await activity.create(a)
+        console.log(savedActivity)
         res.status(201).json(savedActivity)
         }catch(error){
             handleError(error, res)
         }
-      
 
 })
 

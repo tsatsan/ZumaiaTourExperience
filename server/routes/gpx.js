@@ -1,20 +1,8 @@
 import express from 'express'
-var  DOMParser = require('xmldom').DOMParser;
 import path from 'path'
-import util from 'util'
 const multer  = require('multer');
-const ext = require('file-extension');
-var tj = require('togeojson'),
-    fs = require('fs'),
-    // node doesn't have xml parsing or a dom. use xmldom
-    DOMParser = require('xmldom').DOMParser;
-var convert = require('xml-js');
-var aws = require('aws-sdk');
-
-
-
-
-
+const fs = require('fs');
+const aws = require('aws-sdk');
 
 const app = express.Router()
 
@@ -31,10 +19,7 @@ global.date = new Date()
    
   const upload = multer({ storage: storage }).single('file')
 
-  
   global.gpxData = '';
-
-
   global.gpxDataFile = '';
   global.dataLocation = '';
 app.post('/:id', (req, res) =>{
@@ -74,27 +59,10 @@ app.post('/:id', (req, res) =>{
         }
         });
 
-         fs.readFile(gpxData, 'utf-8', (err, data) => {
-             if(err) {
-               console.log('error: ', err);
-             } else {   
-             const result = convert.xml2json(data,{compact: true, spaces: 4});
-              console.log(result)
-              app.get('/:id', (req, res)=>{
-                res.send(result)
-                
-            })
-             }
-           });
 
          if(err) {
             return res.status(500).send("Error uploading file"); 
           }   
-     })
-    
+     })  
 })
-
-
-
-  
 export default app 
