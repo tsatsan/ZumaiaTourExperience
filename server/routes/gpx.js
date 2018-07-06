@@ -79,10 +79,9 @@ app.post('/:id', (req, res) =>{
                console.log('error: ', err);
              } else {   
              const result = convert.xml2json(data,{compact: true, spaces: 4});
-              console.log(data)
               console.log(result)
               app.get('/:id', (req, res)=>{
-                res.send(data)
+                res.send(result)
                 
             })
              }
