@@ -43,6 +43,7 @@ app.post('/', required, async (req,res) =>{
     a.gpxData = global.dataLocation
     a.image = global.imgUrl
     a.user = req.user
+    
     try{
         const savedActivity = await activity.create(a)
         console.log(savedActivity)

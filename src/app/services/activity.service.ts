@@ -15,7 +15,7 @@ export class ActivityService {
  private uploadUrl: string;
  private gpxUrl: string;
  private weatherApiKey = '8be3fadb9f2590db61d9eec9d253e1cf';
- private weatherUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=6358169&APPID=' + this.weatherApiKey ;
+ private weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=6358169&APPID=' + this.weatherApiKey ;
 
   constructor(private http: Http) {
     this.activitiesUrl = urljoin(environment.apiUrl + 'activities');

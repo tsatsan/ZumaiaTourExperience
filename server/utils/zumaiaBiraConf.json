@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "zumaiabira-209810",
+  "private_key_id": "48475541841c37afe45ded660f72dbf26caac56a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC9oxJtjXAHoBvJ\nZXntSNRAxe27c7DZ9iu7F6tkp5TfFX4HDwNH+koDMzgPMiTFRUcv+YVg6OdJwi4Z\n64LO7EKCF5kZ7yJS1lclA4z8nZlaW7rnZWONsL4520s+0Yw8jjEBpCMRn0ZDbzX7\njlUX+UfZcX1ckXEStL1Mb8xmcQevqv8TZ2g3QdTpp3JRqRTOZiIj5+7h6lp0CPeP\n9ZbJm6HsCFOPBoxcI4SDLE9qv2saw+uHc4q4quUDIsQLgxbTWA4Jv89U35iobzsk\nH4YCZNpE28mKUP22WWhcXZM71dVvv5wfZhqgG0i8w3fnZbZZgtuCdWqf+Y7RhihG\nudbifnYFAgMBAAECggEAO7KVP4WR6eSeOrVGP8t4ffeREjymRMc5Fwmpe+NBe0TR\nyrkQKF2DZSR/llELwEpB0bl0IoDPJqoJR0GbiTZY7YkuOjrMjFVLU6ydenzGZOqR\nmPyS7WzhRWdidaETy5Bbnw+jto10WhAtZ0Z0RTrFQo92jmh+twvMt75OE0WrzMG1\nZ4LH7/ddW9keSCjHoKIoiLvM5rDQQGNtA6f0P5UZ8zC1sdOsK6toczFeMQ0LfkpD\nKzxtkQyeUdNWh5ek4yODe+fXPB9QSoRG3b2Q45H2myjEL+c0taktEkZD+uNfTSaD\nO1e4josAq7quWwbIgron0XGhipfpMTNC94VLy4vm9QKBgQDzYnBcdTLr46I96V1B\ncJc5M0xC/1rpYbjSBTXOfFIUGLxueKkYFpjP6bJWo0y2Bxz/v1KOHnKKSrySYwd4\nB5qk8JUPJIYLCDgEmqf4Nxtl4heYfHLYA6zyGF/nOxRc5qLIvkn/x2MltNmhtooP\nbrT4ZygGtHemnFqSV4TpxkaE4wKBgQDHd2/WVIMcpxbcRCybxWwGQAfj/X2GRnH6\nyyyuQx7TLEUL+zxJSMkhlqMdF/bG2qAj6WN/sUKsdkp4DW+27uA1bI+BkEXxUWPH\nl56oXxYn2Tz78yjmo7kMKs9SrBNgh/LRcgXuno27+0b2JXpJxcgJNKwRQ5ouRvVb\nwOtzlU319wKBgCZb2GuqCQmGifaKBimfLiZUwGs6xcBMp41qRs2xaFpEf8ZFfBkQ\nzqrOIU5oVFnICzj/lWpSwCitmMTVmMLBKA1g4Y1Oa1XnyLRpD5oeTVIkbSWaT5te\nEO7jCpJuDEqMCxHqc809RpIVy8sh8uZ1w033LCbKYKVAtUGlS4xwtIKTAoGABPnq\n1VsIZleYz2f4AO7c8g7442w4jHgHce1NsQ9FnpkVI+Zhq6ZgNjFO4nPtmSptIlg5\nPj9K3YiZ9QLIzbSJ7WtG7UGPLSUNqzYSJDszD01xIwv+8joVbMNIptRaK2dY3HbO\nxRQ5jv4G2C85LMv9YJVq0YdxOkRU7LQUa67G4iMCgYB0YzMh8TvlkXt+3uNesnWC\ntFjxpAZWtvlRkHGICC717rpnf5CMow4Y28N4HIDPG3FcgZnGOXS1AWkdcVm4n8vt\nH2Mxca89aJ7HHClL4TVMXwUcsSBvagg5ZxQgLCC7XDVQ7Cz/KP74TRekJoPucQ/y\nAOeVI9cBX+e/Zhph2s6hSg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "zumaiabira@zumaiabira-209810.iam.gserviceaccount.com",
+  "client_id": "110477369127295715040",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/zumaiabira%40zumaiabira-209810.iam.gserviceaccount.com"
+}
