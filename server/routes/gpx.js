@@ -65,72 +65,22 @@ app.post('/:id', (req, res) =>{
         
 
          
-      //  fs.readFile(gpxData, (err, contents) => {
-      //      if(err) {
-      //        console.log('error: ', err);
-      //      } 
-      //      const result = convert.xml2json(contents,{compact: true, spaces: 4});
-            
-      //       // app.get('/:id', (req, res)=>{
-      //       //   res.send(data)
-      //     // })
+       fs.readFile(gpxData, (err, contents) => {
+           if(err) {
+             console.log('error: ', err);
+           } 
+           const result = convert.xml2json(contents,{compact: true, spaces: 4});
+       
+            // app.get('/:id', (req, res)=>{
+            //   res.send(data)
+          // })
+          });
  
-      //   const dbx = new Dropbox({ accessToken: 'f6o5b4QHaaAAAAAAAAADGGSZDMokN2bL5zfy4q5PkJ9e_yZpbwLMan7JWih0H637' });
-      //   dbx.filesUpload({path:  '/' + gpxData, contents: result})
-      //     .then(function(response) {
-      //       console.log('res___>',response);
-      //     })
-      //     .catch(function(error) {
-      //       console.log(error);
-      //     });
-      //   });
-
-
-     // var storage = GoogleCloudStorage({
-    //    projectId: 'zumaiabira-209810',
-    //    keyFilename: '/Users/Luna/Downloads/ZumaiaBira-73b97d68b5fc.json'
-    //  })
-    //  
-    //  var BUCKET_NAME = 'staging.zumaiabira-209810.appspot.com'
-      // https://googlecloudplatform.github.io/google-cloud-node/#/docs/google-cloud/0.39.0/storage/bucket
-    //  var myBucket = storage.bucket(BUCKET_NAME)
-      
-    // check if a file exists in bucket
-      // https://googlecloudplatform.github.io/google-cloud-node/#/docs/google-cloud/0.39.0/storage/file?method=exists
-      // var file = myBucket.file(gpxData)
-      // file.existsAsync()
-      //   .then(exists => {
-      //     if (exists) {
-      //       // file exists in bucket
-      //     }
-      //   })  
-      //   .catch(err => {
-      //      return err
-      //   })
-          
-          
-      // upload file to bucket
-      // https://googlecloudplatform.github.io/google-cloud-node/#/docs/google-cloud/0.39.0/storage/bucket?method=upload
-      // let localFileLocation = gpxData
-      // myBucket.uploadAsync(localFileLocation, { public: true })
-      //   .then(file => {
-      //   })
-          
-     
-      // get public url for file
-
-   // dataLocation = `https://storage.googleapis.com/${BUCKET_NAME}/${gpxDataFile}`
-
-      
-
-
-
-
-
-
+  
          if(err) {
             return res.status(500).send("Error uploading file"); 
           }   
+          return res.status(200).send("uploading file succeful"); 
      }) 
 })
 

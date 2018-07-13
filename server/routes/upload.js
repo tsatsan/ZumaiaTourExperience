@@ -35,14 +35,14 @@ const app = express.Router()
 app.post('/:id', (req,res) =>{
 
     upload(req, res, (err) => {
-      console.log(req.file) 
-      res.send(req.file)
+    
     cloudinary.uploader.upload(req.file.path, (result) => {
             imgUrl = result.url
          }); 
          if(err) {
             return res.status(500).send("Error uploading file"); 
           }
+        return res.status(200).send("uploading file succeful"); 
 
           
      })
