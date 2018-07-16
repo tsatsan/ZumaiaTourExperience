@@ -53,6 +53,7 @@ export class WeatherComponent implements OnInit {
         const globalT = [];
         this.data = data.list[0].weather[0].icon;
         Icons.push(this.data);
+        console.log('datalist--->', data.list);
 
         // tslint:disable-next-line:prefer-const
         for (let el of data.list) {
@@ -69,7 +70,7 @@ export class WeatherComponent implements OnInit {
           Days.push(el.dt_txt);
           }
         }
-
+        console.log(globalT);
         const dayTemp2 = globalT.slice(0, 8);
         const dayTemp3 = globalT.slice(9, 17);
         const dayTemp4 = globalT.slice(18, 25);

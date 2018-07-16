@@ -8,11 +8,10 @@
     <button *ngIf="!isLoggedIn()" [routerLink]="['/signin']"  mat-icon-button>
       <mat-icon>account_circle</mat-icon>
     </button>
-    
     <div *ngIf="isLoggedIn()">
-        <a class="menuLinks" [routerLink]="['/new']">nueva actividad</a>
+        <a class="menuLinks" [routerLink]="['/nueva']">nueva actividad</a>
           <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon >account_circle</mat-icon>
+              <mat-icon class="iconUser">account_circle</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item disabled>
@@ -24,6 +23,11 @@
             
           </mat-menu>
       </div> 
+      <div>
+        <a href="https://www.instagram.com/zumaiabira/">
+          <i class="fab fa-instagram 7x iconInsta"></i>
+        </a> 
+      </div>
   </mat-toolbar>
 <router-outlet></router-outlet>
 
