@@ -122,11 +122,11 @@ export class WeatherComponent implements OnInit {
             Icons.push(el);
           }
         }
-          this.urlImageWeather1 =  Icons[5];
-          this.urlImageWeather2 =  Icons[6];
-          this.urlImageWeather3 =  Icons[7];
-          this.urlImageWeather4 =  Icons[8];
-          this.urlImageWeather5 =  Icons[9];
+          this.urlImageWeather1 =  Icons[6];
+          this.urlImageWeather2 =  Icons[7];
+          this.urlImageWeather3 =  Icons[8];
+          this.urlImageWeather4 =  Icons[9];
+          this.urlImageWeather5 =  Icons[10];
 
           console.log(this.urlImageWeather1);
           for (const el of Icons) {

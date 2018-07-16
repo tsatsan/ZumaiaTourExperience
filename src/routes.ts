@@ -14,7 +14,7 @@ export const appRoutes: Routes = [
   { path: 'nueva/:id' , component: ActivityFormComponent },
   { path: 'signin', component: SigninScreenComponent},
   { path: 'signup', component: SignupScreenComponent},
-  { path: 'activities/:id' , component: MapComponent },
+  { path: 'actividad/:id' , component: MapComponent },
   { path: 'contacto', component: AppContactComponent },
   { path: 'nota-legal', component: NotaLegalComponent },
   { path: 'tiempo', component: WeatherComponentPage  },
