@@ -89,44 +89,44 @@ export class WeatherComponent implements OnInit {
         const tempMin5 =  Math.min(...dayTemp5);
 
         for (let el of Icons) {
-          if (el === '01d') {
+          if (el === '01d' || el === '01n') {
             el = '../../assets/img/weather-Sun.png';
             Icons.push(el);
           }
-          if (el === '02d') {
+          if (el === '02d' || el ===  '02n') {
             el = '../../assets/img/weather-Cloud-Sun.png';
             Icons.push(el);
           }
-          if (el === '03d') {
+          if (el === '03d' || el ===  '03n') {
             el = '../../assets/img/weather-Cloud.png';
             Icons.push(el);
           }
-          if (el === '04d') {
+          if (el === '04d' || el ===  '04n') {
             el = '../../assets/img/weather-cloud-cloud.png';
             Icons.push(el);
           }
-          if (el === '09d') {
+          if (el === '09d' || el ===  '09n') {
             el = '../../assets/img/weather-Rain.png';
             Icons.push(el);
           }
-          if (el === '10d') {
+          if (el === '10d' || el === '10n') {
             el = '../../assets/img/weather-cloud-sun-rain.png';
             Icons.push(el);
           }
-          if (el === '11d') {
+          if (el === '11d' || el === '11n') {
             el = '../../assets/img/weather-Cloud-Lightning.png';
             Icons.push(el);
           }
-          if (el === '13d') {
+          if (el === '13d' || el ===  '13n') {
             el = '../../assets/img/weather-Snow.png';
             Icons.push(el);
           }
         }
-          this.urlImageWeather1 =  Icons[6];
-          this.urlImageWeather2 =  Icons[7];
-          this.urlImageWeather3 =  Icons[8];
-          this.urlImageWeather4 =  Icons[9];
-          this.urlImageWeather5 =  Icons[10];
+          this.urlImageWeather1 =  Icons[5];
+          this.urlImageWeather2 =  Icons[6];
+          this.urlImageWeather3 =  Icons[7];
+          this.urlImageWeather4 =  Icons[8];
+          this.urlImageWeather5 =  Icons[9];
 
           console.log(this.urlImageWeather1);
           for (const el of Icons) {
