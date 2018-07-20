@@ -77,12 +77,15 @@ app.post('/', required, async (req,res) =>{
         gpxData,
         user: req.user
     }
-        a.gpxData = global.dataLocation
-    
+    const aGpxData =  (a.gpxData).substr(0, 2);
+    const aImage = (a.image).substr(0,2);
+
+    if (aGpxData == 'C:'){
+       a.gpxData = global.dataLocation
+    }
+    if (aImage == 'C:'){
         a.image = global.imgUrl
-    
-        a.user = req.user
-  
+     }
     try {
         const updateActivity = await activity.findByIdAndUpdate(req.params.id, a)
         res.status(200).json(updateActivity)
