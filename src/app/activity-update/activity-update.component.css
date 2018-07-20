@@ -1,0 +1,9 @@
+.example-form {
+    min-width: 150px;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .space {
+    flex: 1 1 auto;
+}

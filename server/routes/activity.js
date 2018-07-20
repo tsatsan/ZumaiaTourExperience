@@ -62,5 +62,39 @@ app.post('/', required, async (req,res) =>{
         handleError(error, res)
         }
  });
+ app.put('/:id', required, async (req, res) => {
+    console.log('probant dataLoc --->>', global.dataLocation)
+    const { name, description,  image, tipo, unlevenless, time, distance, gpxData, } = req.body
+    
+    const a = {
+        name, 
+        description, 
+        image, 
+        tipo, 
+        unlevenless, 
+        time, 
+        distance, 
+        gpxData,
+        user: req.user
+    }
+        a.gpxData = global.dataLocation
+    
+        a.image = global.imgUrl
+    
+        a.user = req.user
+  
+    try {
+        const updateActivity = await activity.findByIdAndUpdate(req.params.id, a)
+        res.status(200).json(updateActivity)
+    }catch (error){
+        handleError(error, res)
+        }
+});
+//  app.put('/:id', function(req, res, next) {
+//     activity.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+//       if (err) return next(err);
+//       res.json(post);
+//     });
+//   });
 
 export default app

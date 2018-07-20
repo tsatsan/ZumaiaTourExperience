@@ -1,8 +1,8 @@
-  <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="example-form" enctype="multipart/form-data">
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="example-form" enctype="multipart/form-data">
     <mat-input-container>
         <input  
         matInput 
-        placeholder="Nombre" 
+        placeholder="{{ activityName }}" 
         name="name" 
         ngModel>
     </mat-input-container>
@@ -15,14 +15,6 @@
     <mat-input-container>
         <input matInput placeholder="Time" name="time" ngModel>
     </mat-input-container>
-    <mat-input-container>
-        <input matInput placeholder="Distance" name="distance" ngModel>
-    </mat-input-container>
-    <label for="image">Image</label>
-    <input type="file" id="image" (change)="onFileChange($event)" name="image" accept=".jpg , .png" #imageFileInput ngModel>
-    <label for="gpxFile">Add gpx file</label>
-    <input type="file" id="gpxFile" (change)="onGpxChange($event)" name="gpxData" accept=".gpx" #gpxFileInput ngModel>
-
     <mat-form-field>
         <mat-select placeholder="Tipo" name="tipo" ngModel>
             <mat-option *ngFor="let tipo of tipos" [value]="tipo.value">
@@ -32,4 +24,3 @@
     </mat-form-field>
         <button mat-raised-button color="primary" type="submit">Enviar</button>
 </form>
-

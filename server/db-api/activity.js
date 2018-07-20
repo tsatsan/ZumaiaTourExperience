@@ -20,8 +20,8 @@ export default {
         debug(`delete activity ${_id}`)
         return Activity.findByIdAndRemove({_id})
     },
-    findOneAndUpdate: (_id)=>{
-        debug(`delete activity ${_id}`)
-        return Activity.findOneAndUpdate({_id})
+    findByIdAndUpdate: (_id, a)=>{
+        debug(`update activity ${a.name} i ${a.description}`)
+        return Activity.findByIdAndUpdate(_id, a)
     }
 }

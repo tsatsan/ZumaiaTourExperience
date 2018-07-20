@@ -1,0 +1,12 @@
+.example-form {
+    min-width: 250px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .space {
+    flex: 1 1 auto;
+}
+#tipos{
+    z-index: 10;
+}

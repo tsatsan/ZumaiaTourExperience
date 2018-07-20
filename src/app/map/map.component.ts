@@ -1,9 +1,11 @@
-import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MapService } from '../services/map.service';
 import { Activity } from '../shared/activity.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-// const gpxParse = require('gpx-parse');
+import { DialogService } from 'ng2-bootstrap-modal';
+import {  AppComfirmComponent } from '../modalHome/modal-confirm.component';
 
 
 @Component({
@@ -19,7 +21,8 @@ export class MapComponent implements OnInit, OnDestroy {
   constructor(private _mapService: MapService,
               private _route: ActivatedRoute,
               private router: Router,
-              private authService: AuthService) { }
+              private authService: AuthService,
+              private dialogService: DialogService) { }
 
     activity: Activity;
     loading = true;
@@ -32,7 +35,7 @@ export class MapComponent implements OnInit, OnDestroy {
     activityTime: number;
     activityDistance: number;
     activityGpxData: string;
-
+    id: number;
 
   isLoggedIn() {
     return this.authService.isLoggedIn();
@@ -46,17 +49,32 @@ export class MapComponent implements OnInit, OnDestroy {
      delete(_id) {
        this.sub = this._route.params.subscribe(params => {
        this._mapService.deleteActivity(params.id).then((activity: Activity) => {
-        this.router.navigate(['/activities']);
+        this.router.navigate(['/']);
        });
      });
     }
-    //  update(_id) {
-    //    this.sub = this._route.params.subscribe(params => {
-    //      this._mapService.updateActivity(params.id).then((activity: Activity) => {
-
-    //      });
-    //    });
-    //  }
+      update(_id) {
+        this.sub = this._route.params.subscribe(params => {
+          console.log('params id---->', params.id);
+        const disposable = this.dialogService.addDialog( AppComfirmComponent, {
+      title: 'Edit Activity',
+      name: this.activity.name,
+      description: this.activity.description,
+      distance: this.activity.distance,
+      unlevenless: this.activity.unlevenless,
+      time: this.activity.time,
+      tipo: this.activity.tipo,
+      gpxData: this.activity.gpxData,
+      image: this.activity.image,
+      id: params.id,
+      });
+    });
+  // We can close dialog calling disposable.unsubscribe();
+  // If dialog was not closed manually close it by timeout
+  // setTimeout(() => {
+  //     disposable.unsubscribe();
+  // }, 10000);
+ }
 
   ngOnInit() {
     this.sub = this._route.params.subscribe(params => {
@@ -73,10 +91,10 @@ export class MapComponent implements OnInit, OnDestroy {
       this.activityDistance = this.activity.distance;
       this.activityGpxData = this.activity.gpxData;
       console.log(this.activity);
-      console.log(params.id);
     });
   });
 }
+
   ngOnDestroy() {
   this.sub.unsubscribe();
   }

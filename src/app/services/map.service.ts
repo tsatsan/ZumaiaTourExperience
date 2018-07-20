@@ -42,14 +42,6 @@ export class MapService {
             .then(response => response.json() as Activity)
             .catch(this.handleError);
   }
-  // updateActivity(id): Promise<void | Activity> {
-  //   const url = urljoin(this.activitiesUrl + '/update/'  +  id);
-  //   return this.http.put(url, Activity)
-  //           .toPromise()
-  //           .then(response => response.json() as Activity)
-  //           .catch(this.handleError);
-  // }
-
   plotActivity(id: number) {
     const myStyle = {
       'color': '#3949AB',
@@ -77,7 +69,6 @@ export class MapService {
     map.fitBounds(gpxLayer.getBounds());
    }).addTo(map);
    });
-
 }
   handleError(error: any) {
     const errMsg = error.message ? error.message :

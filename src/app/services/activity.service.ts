@@ -13,12 +13,14 @@ import 'rxjs/add/operator/catch';
 export class ActivityService {
  private activitiesUrl: string;
  private uploadUrl: string;
+ private updateUrl: string;
  private gpxUrl: string;
  private weatherApiKey = '8be3fadb9f2590db61d9eec9d253e1cf';
  private weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=6358169&APPID=' + this.weatherApiKey ;
 
   constructor(private http: Http) {
     this.activitiesUrl = urljoin(environment.apiUrl + 'activities');
+    this.updateUrl = urljoin(environment.apiUrl + 'activities/');
     this.uploadUrl = urljoin(environment.apiUrl , 'upload/');
     this.gpxUrl = urljoin(environment.apiUrl , 'gpx/');
   }
@@ -51,6 +53,16 @@ export class ActivityService {
     .map((response: Response) => response.json())
     .catch((error: Response) => Observable.throw(error.json()));
   }
+
+  updateActivity(id, activity): Promise<void | Activity> {
+    const token = localStorage.getItem('token');
+    const url = urljoin(this.updateUrl + id + `?token=${token}`);
+    return this.http.put(url, activity)
+            .toPromise()
+            .then(response => response.json() as Activity)
+            .catch(this.handleError);
+  }
+
   upFile(file): Observable<string> {
     const formData = new FormData();
     formData.append('file', file);
@@ -73,6 +85,7 @@ export class ActivityService {
      return this.http.post(url + id , formData, options).map(response => response.text())
      .catch((error: Response) => Observable.throw(error.json()));
   }
+
   getWeather() {
     return this.http.get(this.weatherUrl)
       .map((res: Response) => res.json());
