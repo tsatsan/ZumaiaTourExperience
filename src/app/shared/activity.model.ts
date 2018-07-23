@@ -4,9 +4,9 @@ export class Activity {
     description: string;
     image: string;
     tipo: string;
-    unlevenless: number;
-    time: number;
-    distance: number;
+    unlevenless: string;
+    time: string;
+    distance: string;
     gpxData: string;
     user: {
         firstName: string,
@@ -20,9 +20,9 @@ constructor(
     description: string,
     image: string,
     tipo: string,
-    unlevenless: number,
-    time: number,
-    distance: number,
+    unlevenless: string,
+    time: string,
+    distance: string,
     gpxData: string,
 ) {
     this.name = name;

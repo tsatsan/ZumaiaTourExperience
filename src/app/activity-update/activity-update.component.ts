@@ -32,9 +32,9 @@ export class ActivityUpdateComponent implements OnInit {
     activityDescription: String;
     activityImage: String;
     activityTipo: string;
-    activityUnlevenless: number;
-    activityTime: number;
-    activityDistance: number;
+    activityUnlevenless: string;
+    activityTime: string;
+    activityDistance: string;
     activityGpxData: string;
 
     uploadFile: any;

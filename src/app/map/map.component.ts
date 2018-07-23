@@ -31,9 +31,9 @@ export class MapComponent implements OnInit, OnDestroy {
     activityDescription: String;
     activityImage: String;
     activityTipo: string;
-    activityUnlevenless: number;
-    activityTime: number;
-    activityDistance: number;
+    activityUnlevenless: string;
+    activityTime: string;
+    activityDistance: string;
     activityGpxData: string;
     id: number;
 

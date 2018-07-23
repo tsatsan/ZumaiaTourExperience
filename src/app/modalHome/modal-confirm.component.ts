@@ -10,9 +10,9 @@ export interface ConfirmModel {
   name: string;
   tipo: string;
   description: string;
-  unlevenless: number;
-  distance: number;
-  time: number;
+  unlevenless: string;
+  distance: string;
+  time: string;
   image: string;
   gpxData: string;
   id: string;
@@ -28,9 +28,9 @@ export class AppComfirmComponent extends DialogComponent<ConfirmModel, boolean> 
   name: string;
   description: string;
   tipo: string;
-  unlevenless: number;
-  distance: number;
-  time: number;
+  unlevenless: string;
+  distance: string;
+  time: string;
   image: string;
   gpxData: string;
   id: string;

@@ -7,9 +7,9 @@ const ActivitySchema = new Schema({
     description: { type: String, required: true },
     image: { type: String, required: true },
     tipo: { type: String, required: true },
-    unlevenless: { type: Number, required: true },
-    time: { type: Number, required: true },
-    distance: { type: Number, required: true },
+    unlevenless: { type: String, required: true },
+    time: { type: String, required: true },
+    distance: { type: String, required: true },
     gpxData: { type: String, required: true},
     user: { type: ObjectId, ref: 'User ', required: true } 
 })

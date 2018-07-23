@@ -18,14 +18,14 @@
         margin-right: -16px;
     }
 }
-.detail{
-    background: white;
-    padding-right: 10px;
-    padding-left: 5px;
-    border-radius: 25px;
-    color: green;
-    font-weight: 300;
-}
+    .detail{
+        background: white;
+        padding-right: 10px;
+        padding-left: 5px;
+        border-radius: 25px;
+        color: green;
+        font-weight: 300;
+    }
 p {
     margin:0;
     font-weight: 300;
@@ -170,7 +170,7 @@ h5{
 
 @media (max-width: 830px) {
     .subtitle{
-       display: none;
+       font-size: 14px;
    }
    .textBlue{
        margin-right: 20px;

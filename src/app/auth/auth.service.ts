@@ -4,7 +4,7 @@ import { environment } from '../../environments/environment';
 import { User } from './user.model';
 import { Http, Headers, Response } from '@angular/http';
 // tslint:disable-next-line:import-blacklist
-import 'rxjs/Rx';
+import 'rxjs';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
