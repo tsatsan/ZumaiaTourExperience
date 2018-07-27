@@ -215,12 +215,11 @@ h5{
   }
 
   .descriptionCard{
-    
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-line-clamp: 4; /* number of lines to show */
         line-height: 1.5;        /* fallback */
         letter-spacing: 1px;/* fallback */     
   }
