@@ -92,7 +92,7 @@ onGpxChange(event) {
       );
       console.log(a);
       this.activityService.updateActivity(id, a);
-      this.router.navigate(['/actividad', id]);
+      this.router.navigate(['/']);
 
     form.resetForm();
     this.result = true;

@@ -17,6 +17,11 @@
         margin-left: -16px;
         margin-right: -16px;
     }
+
+    .webTitle{
+    max-width: 1200px;
+    margin: 36px auto;
+    }
 }
     .detail{
         background: white;
@@ -60,12 +65,21 @@ p {
     width: 30px;
 }
 
-
 .webTitle{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 36px auto;
     padding-left: 152px;
     padding-right: 152px;
+    margin-left: -100px;
+}
+@media (max-width: 375px){
+    .webTitle{
+        max-width: 1200px;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
 }
 h1{
     font-size: 22px;
@@ -116,15 +130,7 @@ h5{
     margin-right: 100px;
     text-align: right;
 }
-@media (max-width: 830px) {
-    .example-card{
-        padding: 30px;
-    }
-    .webTitle{
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-  }
+
 .menuLinks{
     color: gray;
     letter-spacing: 1px;
@@ -160,17 +166,37 @@ h5{
     justify-content: center;
     margin: 0 auto;
 }
-.subtitle{
-    font-weight: 100;
+.title{
+    font-size: 30px;
 }
+.subtitle2{
+    font-weight: 300;
+    font-size: 22px;
+}
+.subtitle{
+    font-weight: 300;
+    font-size: 30px;
+    max-width: 520px;
+    letter-spacing: 1px;
+    margin-bottom: 46px;
+    max-width: 600px;
+
+}
+
 .imgButton{
     width: 150px;
     margin-top: 30px;
 }
 
 @media (max-width: 830px) {
+    .example-card{
+        padding: 30px;
+    }
     .subtitle{
        font-size: 14px;
+   }
+   .subtitle2{
+       display: none;
    }
    .textBlue{
        margin-right: 20px;
@@ -184,8 +210,17 @@ h5{
        max-width: 100px;
    }
    .imgButton{
-       margin-top: 70px;
-       margin-left: 54px;
-
+       margin-top: 20px;
    }
+  }
+
+  .descriptionCard{
+    
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-height: 1.5;        /* fallback */
+        letter-spacing: 1px;/* fallback */     
   }

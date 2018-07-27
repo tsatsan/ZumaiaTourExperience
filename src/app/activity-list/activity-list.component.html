@@ -1,10 +1,10 @@
-<div class="webTitle">
-    <h1 class="title">ZumaiaBira</h1>
-    <h1 class="subtitle">Descubre lugares, paseos y excursiones por la costa y la montaña</h1>   
-</div>
+
     <div class="example-card">
-         
-        <mat-card-content *ngFor="let activity of activities">
+         <div class="webTitle">
+    <h1 class="title">ZumaiaBira</h1>
+    <p class="subtitle">Descubre lugares, paseos y excursiones por la costa y la montaña</p>   
+</div>
+        <mat-card-content *ngFor="let activity of activities; trackBy: trackActivity">
             <mat-card class="target">
 
         <button class="{{ activity.tipo }}"> {{ activity.tipo }} </button> 
@@ -26,10 +26,16 @@
                                     <p>  {{ activity.time  }}</p>
                             </div>
                         </div>
+                       
                             <a [routerLink]="['/activities', activity._id]">
-                            <h5>{{ activity.name }}</h5>     
-                            </a>
-                            <p>{{ activity.description }}</p>
+                                <h5>{{ activity.name }}</h5>     
+                                </a>
+                        <div class="descriptionCard">        
+                                <p>{{ activity.description }}</p>
+                        </div>     
+                            
+                 
+        
             </mat-card>      
         </mat-card-content>
     </div>   
@@ -40,8 +46,8 @@
 <div class="containerBlue">
     <div class="content">
             <div class="textBlue">
-                    <h4>Descarga la App gratuita en tu mobil</h4>
-                    <p class='subtitle'>Si vas  a visitar Zumaia, o te encuentras ya. Descargate la app en tu ovil, para poder realizar las excursiones y paseos propuestos</p>
+                    <h4>Descarga la App gratuita en tu movil</h4>
+                    <p class='subtitle2'>Si vas  a visitar Zumaia, o te encuentras ya. Descargate la app en tu movil, para poder realizar las excursiones y paseos propuestos</p>
                     <img class="imgButton" src='../../assets/img/button.png'>
             </div>
            <div class="imageBlue">
