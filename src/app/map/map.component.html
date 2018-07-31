@@ -7,8 +7,23 @@
       <div class="col-md-6 info-container">
         <div id="run-info">
             <h2 class="data-entry"> {{ activityName }} </h2>
+            <button class="{{ activity.tipo }}"> {{ activity.tipo }} </button>
+            <div class="details">
+                <div class="detail">
+                        <mat-icon>trending_flat</mat-icon>
+                        <p> {{ activity.distance }}  </p>
+                </div>
+                <div class="detail">
+                    <mat-icon>trending_up</mat-icon>
+                    <p>  {{ activity.unlevenless }}</p>
+                </div>
+                <div class="detail">
+                        <mat-icon>access_time</mat-icon>
+                        <p>  {{ activity.time  }}</p>
+                </div>
+            </div> 
             <p class="data-entry"> {{ activityDescription }}</p>  
-            <p class="data-entry"> {{ activityDistance }}</p>  
+         
         </div>
       </div>
       <div class="col-md-6"> 
